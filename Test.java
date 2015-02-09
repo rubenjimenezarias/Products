@@ -15,7 +15,7 @@ public class Test
         Product producto3 = new Product(3,"c");
         Product producto4 = new Product(4,"d");
         Product producto5 = new Product(5,"e");
-        Product producto6 = new Product(6,"f");
+        Product producto6 = new Product(1,"f");
         
         stockManager.addProduct(producto1);
         stockManager.addProduct(producto2);

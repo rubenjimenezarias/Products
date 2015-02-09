@@ -26,7 +26,18 @@ public class StockManager
      */
     public void addProduct(Product item)
     {
-        stock.add(item);
+        boolean permiso = true;
+        for (Product producto: stock)
+        {
+            if (item.getID() == producto.getID())
+            {
+                permiso = false;
+            }
+        } 
+        if(permiso)
+        {
+            stock.add(item);
+        }
     }
     
     /**
