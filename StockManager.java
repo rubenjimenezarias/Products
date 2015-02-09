@@ -48,7 +48,10 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
-        findProduct(id).increaseQuantity(amount);
+        if (findProduct(id) != null)
+        {
+            findProduct(id).increaseQuantity(amount);
+        }
     }
     
     /**
@@ -80,7 +83,12 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        return findProduct(id).getQuantity();
+        int cantidad = 0;
+        if (findProduct(id) != null)
+        {
+            cantidad = findProduct(id).getQuantity();
+        }
+        return cantidad;
     }
 
     /**
