@@ -106,4 +106,21 @@ public class StockManager
             }
         } 
     }
+    /**
+     * Busca por nombre un producto
+     */
+    public Product findProduct(String name)
+    {
+        Product productoBuscado = null;
+        int index = 0;
+        while (productoBuscado == null && index < stock.size())
+        {
+            if (stock.get(index).getName() == name)
+            {
+                productoBuscado = stock.get(index);
+            }
+            index ++;
+        }
+        return productoBuscado;
+    }
 }

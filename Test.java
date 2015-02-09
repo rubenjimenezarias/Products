@@ -7,7 +7,7 @@
  */
 public class Test
 {
-    public void test1()
+    public Product test1()
     {
         StockManager stockManager = new StockManager();
         Product producto1 = new Product(1,"a");
@@ -26,7 +26,7 @@ public class Test
         
         producto1.increaseQuantity(25);
         
-        stockManager.productsQuantityMenorQue(20);
+        return stockManager.findProduct("a");
         
     }
     
