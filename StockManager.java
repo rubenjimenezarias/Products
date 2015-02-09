@@ -37,17 +37,7 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
-        boolean encontrado = false;
-        int index = 0;
-        while (encontrado == false && index < stock.size())
-        {
-            if (stock.get(index).getID() == id)
-            {
-                stock.get(index).increaseQuantity(amount);
-                encontrado = true;
-            }
-            index ++;
-        }
+        findProduct(id).increaseQuantity(amount);
     }
     
     /**
@@ -79,19 +69,7 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
-        boolean encontrado = false;
-        int cantidad = 0;
-        int index = 0;
-        while (encontrado == false && index < stock.size())
-        {
-            if (stock.get(index).getID() == id)
-            {
-                cantidad = stock.get(index).getQuantity();
-                encontrado = true;
-            }
-            index ++;
-        }
-        return cantidad;
+        return findProduct(id).getQuantity();
     }
 
     /**
