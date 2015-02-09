@@ -82,4 +82,17 @@ public class StockManager
             System.out.println(producto.toString());
         } 
     }
+    /**
+     * Print details of all the products que haya menos de x cantidad.
+     */
+    public void productsQuantityMenorQue(int cantidad)
+    {
+        for (Product producto: stock)
+        {
+            if (producto.getQuantity() < cantidad)
+            {
+                System.out.println(producto.toString());
+            }
+        } 
+    }
 }
