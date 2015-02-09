@@ -37,6 +37,15 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        int index = 0;
+        while (index < stock.size())
+        {
+            if (stock.get(index).getID() == id)
+            {
+                stock.get(index).increaseQuantity(amount);
+            }
+            index ++;
+        }
     }
     
     /**

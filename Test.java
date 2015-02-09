@@ -7,7 +7,7 @@
  */
 public class Test
 {
-    public int test1()
+    public void test1()
     {
         StockManager stockManager = new StockManager();
         Product producto1 = new Product(1,"a");
@@ -26,9 +26,8 @@ public class Test
         stockManager.addProduct(producto5);
         stockManager.addProduct(producto6);
         
-        producto1.increaseQuantity(3);
-        
-        return stockManager.numberInStock(1);
+        stockManager.delivery(1,20);
+        stockManager.printProductDetails();
     }
     
     
